@@ -1,11 +1,12 @@
 package parser
 
 import (
-	"github.com/PuerkitoBio/goquery"
-	"github.com/borakasmer/fuel/core"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/PuerkitoBio/goquery"
+	"github.com/borakasmer/fuel/core"
 )
 
 /*
@@ -67,7 +68,7 @@ func ParseWeb(url string) (core.String, core.String, core.String) {
 			data.Each(func(i int, s *goquery.Selection) {
 				petrol = s.Find("td:nth-child(2) span:nth-child(1)").Text()
 				diesel = s.Find("td:nth-child(3) span:nth-child(1)").Text()
-				lpg = s.Find("td:nth-child(5) span:nth-child(1)").Text()
+				lpg = s.Find("td:nth-child(4) span:nth-child(1)").Text()
 				//fmt.Println(petrol)
 				//fmt.Println(diesel)
 			})
